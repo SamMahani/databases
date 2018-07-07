@@ -9,7 +9,7 @@ CREATE TABLE messages (
   username VARCHAR(20),
   text text,
   roomname VARCHAR(20),
-  PRIMARY KEY (`id`)  
+  PRIMARY KEY (id)  
 );
 
 INSERT INTO messages (username, text, roomname)
