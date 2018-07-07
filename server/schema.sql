@@ -1,3 +1,5 @@
+DROP DATABASE chat; 
+
 CREATE DATABASE chat;
 
 USE chat;
@@ -17,12 +19,15 @@ USE chat;
 DROP TABLE IF EXISTS messages;
     
 CREATE TABLE messages (
-  `id` INTEGER NULL AUTO_INCREMENT DEFAULT NOT NULL,
-  `username` VARCHAR(20) NULL DEFAULT NULL,
-  `text` VARCHAR(200) NULL DEFAULT NULL,
-  `roomname` VARCHAR(20) NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  id INTEGER AUTO_INCREMENT NOT NULL,
+  username VARCHAR(20),
+  text text,
+  roomname VARCHAR(20),
+  PRIMARY KEY (`id`)  
 );
+
+INSERT INTO messages (username, text, roomname)
+VALUES ('Duss', 'Hello!', 'main'), ('Sam', 'Hi Sam!', 'main');
 
 -- ---
 -- Foreign Keys 
